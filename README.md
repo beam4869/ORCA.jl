@@ -82,4 +82,4 @@ The number of objectives must be ≥ 2
 
 # 📘 Defining Objectives in JuMP
 Objective expressions in ORCA are standard JuMP expressions.
-You can read more about how to define and manipulate them here: 🔗 [https://jump.dev/JuMP.jl/stable/manual/expressions/](JuMP Expressions Documentation)
+You can read more about how to define and manipulate them here: 🔗 [JuMP Expressions Documentation](https://jump.dev/JuMP.jl/stable/manual/expressions/)
