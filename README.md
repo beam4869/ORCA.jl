@@ -60,9 +60,10 @@ using JuMP
 m = Model()
 @variable(m, x >= 0)
 @variable(m, y >= 0)
-@constraint(m, x + y >= 1)
+@constraint(m, x + y <= 1)
+@constraint(m, 5x + y == 3)
 @objective(m, Min, x + 2y)
-@objective(m, Min, (x - 1)^2 + (y - 2)^2)
+@objective(m, Min, 3x+ y)
 
 # Call ORCA's main analysis function
 result = ORCA.main(m, [objective_function(m, 1), objective_function(m, 2)])
