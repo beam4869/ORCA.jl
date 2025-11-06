@@ -3,7 +3,7 @@ Multi-objective dimensionality reduction algorithm: Objective reduction communit
 
 ORCA is a Julia package designed for extracting linear Jacobian blocks and analyzing objective correlation structures in multi-objective optimization models built with JuMP.
 
-It provides a modular interface to compute and visualize correlations between multiple objectives, making it particularly useful for dimensionality reduction and decision-making in many-objective optimization problems.
+It provides a modular interface to compute correlations between multiple objectives, making it particularly useful for dimensionality reduction and decision-making in many-objective optimization problems.
 
 # 🧩Prerequisites
 
@@ -25,12 +25,6 @@ julia> Pkg.add(url="https://github.com/beam4869/ORCA.jl")
 
 This will download and install the package and its dependencies.
 
-You may need to manually install the HiGHS package, it does not automatically instasll for some reason:
-```
-julia> using Pkg
-julia> Pkg.add("HiGHS)
-```
-
 # ✅ Verifying Installation
 Once installed, you can verify everything is working by running the built-in tests:
 ```
@@ -48,8 +42,6 @@ Precompiling project...
 ```
 
 If the tests pass — congratulations! ORCA is installed and ready to use.
-
-It may fail due to Leiden.jl, we will try to fix it later. You can still try to use ORCA.main which normally should be able to work.
 
 # 🚀 Usage
 After successful installation and testing, you can start using ORCA as follows:
