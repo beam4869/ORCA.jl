@@ -3,7 +3,6 @@ using Test
 using ORCA
 using JuMP
 using Statistics
-using HiGHS
 using XLSX, DataFrames
 
 @testset "NH3 toy test" begin
@@ -41,7 +40,7 @@ using XLSX, DataFrames
     el_start_risk=5
     el_op_risk=1
 
-    nh3w = Model(HiGHS.Optimizer)
+    nh3w = Model()
     set_silent(nh3w)  # Suppress solver output (optional)
 
     @variable(nh3w, da[-2:tl], Bin)

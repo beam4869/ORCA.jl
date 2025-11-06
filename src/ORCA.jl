@@ -16,7 +16,7 @@ using .correlation_strength
 
 Entry point for extracting linear Jacobian blocks from a JuMP model.
 """
-function main(model, obj_exprs)
+function main(model, obj_exprs, num_groups=2)
     Jeq, Jineq, Jobj, varnames = linear_jac.extract_linear_blocks(model; obj_exprs)
     # println("Columns (variables): ", varnames)
     println("Jeq size   = ", size(Jeq))
@@ -24,7 +24,7 @@ function main(model, obj_exprs)
     println("Jineq size = ", size(Jineq))
     println("Jobj size  = ", size(Jobj))
 
-    results = NLPCorrStrengGenerating(Jineq, Jobj, Jeq, 2)
+    results = NLPCorrStrengGenerating(Jineq, Jobj, Jeq, num_groups)
     println("NLPCorrStrengGenerating results:", results.groups)
     return results
 end
