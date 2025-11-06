@@ -3,7 +3,7 @@ uuid = "a8967ba7-180c-42ff-a42b-62a6bf227abe"
 version = "0.1.0"
 
 [deps]
-CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
+XLSX = "fdbf4ff8-1666-58a4-91e7-1b58723a45e0"
 DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
 JuMP = "4076af6c-e467-56ae-b986-b466b2749572"
 Leiden = "e5cf005d-d64d-44d4-821e-2384bf4ace83"
