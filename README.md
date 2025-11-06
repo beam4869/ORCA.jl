@@ -76,7 +76,7 @@ println("ORCA results:", res.groups)
 ## Function signature
 
 ```
-ORCA.main(model, [objective_1, objective_2, ..., objective_n])
+ORCA.main(model, [objective_1, objective_2, ..., objective_n], number_of_groupings)
 ```
 
 `model` — a JuMP model containing your variables, constraints, and objectives
@@ -84,6 +84,8 @@ ORCA.main(model, [objective_1, objective_2, ..., objective_n])
 `[objective_1, objective_2, ..., objective_n]` — a list of objective expressions defined in JuMP
 
 The number of objectives must be ≥ 2
+
+`number_of_groupings` is default set to be 2.
 
 # 📘 Defining Objectives in JuMP
 Objective expressions in ORCA are standard JuMP expressions.
