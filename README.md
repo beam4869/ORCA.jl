@@ -48,6 +48,7 @@ Precompiling project...
 ```
 
 If the tests pass — congratulations! ORCA is installed and ready to use.
+It may fail due to Leiden.jl, we will try to fix it later. You can still try to use ORCA.main which normally should be able to work.
 
 # 🚀 Usage
 After successful installation and testing, you can start using ORCA as follows:
