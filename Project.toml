@@ -3,6 +3,7 @@ uuid = "a8967ba7-180c-42ff-a42b-62a6bf227abe"
 version = "0.1.0"
 
 [deps]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 XLSX = "fdbf4ff8-1666-58a4-91e7-1b58723a45e0"
 DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
 JuMP = "4076af6c-e467-56ae-b986-b466b2749572"
