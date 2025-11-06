@@ -60,13 +60,17 @@ using JuMP
 m = Model()
 @variable(m, x >= 0)
 @variable(m, y >= 0)
-@constraint(m, x + y <= 1)
-@constraint(m, 5x + y == 3)
-@objective(m, Min, x + 2y)
-@objective(m, Min, 3x+ y)
+@variable(m, z >= 0)
+@constraint(m, x + y -z <= 1)
+@constraint(m, 5x + y + 2z== 3)
+@constraint(m, -x + y +2z <= 0)
+@expression(m, obj1, x + 2y +z)
+@expression(m, obj2, -3x - y -z)
+@expression(m, obj3, x - y +z)
 
 # Call ORCA's main analysis function
-result = ORCA.main(m, [objective_function(m, 1), objective_function(m, 2)])
+res = ORCA.main(m, [obj1, obj2, obj3])
+println("ORCA results:", res.groups)
 ```
 
 ## Function signature
