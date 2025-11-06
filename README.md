@@ -20,7 +20,7 @@ Open a terminal (or Julia REPL) and enter:
 
 ```
 julia> using Pkg
-julia> Pkg.add(url="https://github.com/beam4869/ORCA.git")
+julia> Pkg.add(url="https://github.com/beam4869/ORCA.jl")
 ```
 
 This will download and install the package and its dependencies.
